@@ -13,34 +13,10 @@ import {
 } from "react-icons/fa";
 import RepoList from "../components/repos/RepoList";
 import Spinner from "../components/layout/Spinner";
+import PersonalInfo from "../components/users/PersonalInfo";
+import GithubUserInfo from "../components/users/GithubUserInfo";
 import GithubContext from "../context/github/GithubContext";
 import { getUserAndRepos } from "../context/github/GithubActions";
-
-const PersonalInfo = ({ title, value, icon, link }) => {
-  return (
-    <div className="stat">
-      <div className="stat-title text-md flex items-center gap-2">
-        {icon}
-        {title}
-      </div>
-      <div className="text-lg stat-value">
-        <a href={link} target="_blank" rel="noreferrer">
-          {value}
-        </a>
-      </div>
-    </div>
-  );
-};
-
-const GithubUserInfo = ({ title, value, icon }) => {
-  return (
-    <div className="stat">
-      <div className="stat-figure text-secondary">{icon}</div>
-      <div className="stat-title pr-5">{title}</div>
-      <div className="stat-value pr-5 text-3xl md:text-4xl">{value}</div>
-    </div>
-  );
-};
 
 const User = () => {
   const params = useParams();
